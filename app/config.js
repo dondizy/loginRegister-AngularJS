@@ -1,4 +1,4 @@
-myApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider){
+myApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', function($stateProvider, $locationProvider, $urlRouterProvider){
     
     $locationProvider.hashPrefix('');
     
@@ -24,5 +24,7 @@ myApp.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
         url: '/register',
         templateUrl: 'template/register.html',
         controller: 'loginController'
-    })
+    });
+    
+     $urlRouterProvider.otherwise('regsiter');
 }]);
