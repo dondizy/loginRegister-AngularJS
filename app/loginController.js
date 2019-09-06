@@ -1,7 +1,7 @@
 
 console.log('Login Controller Works')
 
-myApp.controller('loginController', ['$scope', '$location', "$timeout", function($scope, $location, $timeout){
+myApp.controller('loginController', ['$scope', '$location', "$timeout","$stateParams", "$state", function($scope, $location, $timeout, $stateParams, $state){
     $scope.user = {};
     $scope.newUser = {};
     $scope.ifClick = false;
@@ -9,7 +9,8 @@ myApp.controller('loginController', ['$scope', '$location', "$timeout", function
 
     const result = () => {
         alert('Login Successful!');
-        $location.path('/dashboard');
+        //$location.path('/dashboard');
+         $state.go('dashboard');
     }
 
     $scope.createUser = function(){
@@ -19,7 +20,8 @@ myApp.controller('loginController', ['$scope', '$location', "$timeout", function
         sessionStorage.setItem('username', $scope.newUser.username);
         sessionStorage.setItem('password', $scope.newUser.password);
         // location.replace("#/login");
-        $location.path('/login');
+        //$location.path('/login');
+        $state.go('login');
     }
 
     $scope.validate = function(){
