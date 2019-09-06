@@ -1,0 +1,16 @@
+<div class="page-content">
+    <div class="content">
+        <form ng-submit="validate()">
+            <fieldset>
+                <!-- <legend></legend> -->
+                <input ng-model='user.username' type="text" placeholder="Username" required />
+                <input ng-model='user.password' type="password" placeholder="Password"  required/>
+                <button ng-disabled="ifClick" type="submit"><i class="fa fa-refresh fa-spin" ng-show='ifLogin' ></i>
+                    <i ng-show='ifLogin'>Loading</i>
+                    <span ng-hide='ifClick'>Login</span>
+                </button>
+                <p>Don't have an acount? Click <a href='#/register'>here</a> to regster!</p>
+            </fieldset>
+        </form>
+    </div>
+</div>

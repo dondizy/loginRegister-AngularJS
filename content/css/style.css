@@ -1,0 +1,52 @@
+
+/* div{
+    border: thin solid red;
+} */
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+form{
+    display: block;
+}
+
+
+form fieldset{
+    margin: 2em 4em;
+    padding: 2em;
+    border-radius: 1em;
+    border: none;
+    background-color: rgba(184, 184, 184, 0.212);
+}
+
+.content input{
+    width: 90%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1.5px solid #ccc;
+}
+
+form button{
+    padding: 0.5em 1.8em;
+    border-radius: 10px;
+    border: none;
+    margin-top: 0.5em;
+    background-color: rgb(95, 172, 112);
+    color: #fff;
+    cursor: pointer;
+
+}
+
+form p{
+    float: right;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border: 1.5px solid rgb(95, 172, 112);
+}
