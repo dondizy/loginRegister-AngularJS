@@ -11,6 +11,7 @@ myApp.controller('loginController', ['$scope', '$location', "$timeout","$statePa
         alert('Login Successful!');
         //$location.path('/dashboard');
          $state.go('dashboard');
+        
     }
 
     $scope.createUser = function(){
@@ -21,10 +22,18 @@ myApp.controller('loginController', ['$scope', '$location', "$timeout","$statePa
         sessionStorage.setItem('password', $scope.newUser.password);
         // location.replace("#/login");
         //$location.path('/login');
-        $state.go('login');
+        $state.go('login',
+                 {tayoData: {username: 'johnsnow',
+                               password: 'test1234'        
+                              }
+                   });
+        
     }
 
     $scope.validate = function(){
+        $scope.userDetails = $stateParams.tayoData;
+        console.log( $scope.userDetails);
+        
         $scope.newUser.username = sessionStorage.getItem('username');
         $scope.newUser.password = sessionStorage.getItem('password');
         if ($scope.user.username == $scope.newUser.username && $scope.user.password == $scope.newUser.password){
