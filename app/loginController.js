@@ -10,7 +10,8 @@ myApp.controller('loginController', ['$scope', '$location', "$timeout","$statePa
     const result = () => {
         alert('Login Successful!');
         //$location.path('/dashboard');
-         $state.go('dashboard');
+        $state.go('dashboard');
+         
     }
 
     $scope.createUser = function(){
