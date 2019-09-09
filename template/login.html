@@ -1,5 +1,5 @@
 <div class="page-content">
-    <div class="content">
+    <div class="content" ng-controller="loginController as ctrl1">
         <form ng-submit="validate()">
             <fieldset>
                 <!-- <legend></legend> -->
@@ -11,6 +11,12 @@
                 </button>
                 <p>Don't have an acount? Click <a href='#/register'>here</a> to regster!</p>
             </fieldset>
+            <input ng-model="ctrl1.name.input" type="text" />
         </form>
     </div>
+
+    <div ng-controller="registerController as ctrl2">
+        <p> {{ctrl2.value}} </p>
+    </div>
+
 </div>

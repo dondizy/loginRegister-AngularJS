@@ -21,7 +21,7 @@ myApp.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', funct
         controller: 'loginController'
     })
     .state('regsiter',{
-        url: '/register',
+        url: '/register/:tayoData',
         templateUrl: 'template/register.html',
         controller: 'loginController'
     });

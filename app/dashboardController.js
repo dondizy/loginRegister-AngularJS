@@ -1,3 +1,6 @@
-myApp.controller('dashboardController', ['$scope', '$location', function($scope, $location){
+myApp.controller('dashboardController', ['$scope', '$location', 'Data', function($scope, $location, Data){
     console.log('dashboardController is working');
+    $scope.data = Data;
+    console.log(data);
 }])
+
